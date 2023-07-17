@@ -13,7 +13,7 @@ from glob import glob
 
 def regrid_and_save(file, out_ds, wgts_dir):
     model_name = os.path.basename(file).split('_')[2]
-    weight_file = os.path.join(weights_dir, f'wgts_conservative_{model_name}.nc')
+    weight_file = os.path.join(weights_dir, f'wgts_bilinear_{model_name}.nc')
     regridded_file = file.replace('.nc', '_gr.nc')
 
     # Check if regridded file already exists
